@@ -60,4 +60,4 @@ def main():
 
 
 if __name__ == '__main__':
-	main().to_csv('astro_info.csv', index=False)
+	main().to_csv('astro_info_'+str(datetime.datetime.today().strftime('%Y%m%d'))+'.csv', index=False)
