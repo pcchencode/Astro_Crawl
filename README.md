@@ -1,6 +1,7 @@
 # Astro_Crawl
 * 目標網址：[科技紫微網](http://astro.click108.com.tw)
 * 需求：請參考檔案 [需求.pdf](https://github.com/pcchencode/Astro_Crawl/blob/master/需求.pdf)
+* 主程式檔：[astro.py](https://github.com/pcchencode/Astro_Crawl/blob/master/astro.py)
 
 ## 使用方法
 * Docker:
