@@ -17,19 +17,12 @@ docker run --mount type=bind,source={/YOUR/PATH/OF/LOCAL/WORKING/DIRECTORY},targ
 * linux or terminal:
 1. clone this repo and cd into this as working directory
 
-2. install the required packages in [requirements.txt](https://github.com/pcchencode/PTT_web_crawler/blob/master/requirements.txt)
+2. install the required packages in [requirements.txt](https://github.com/pcchencode/Astro_Crawl/blob/master/requirements.txt)
 
 3. command
 ```
 python3 astro.py 
 ```
-
-
-
-
-
-
-
 
 
 
@@ -39,5 +32,5 @@ python3 astro.py
     * 09 * * * python3 \path\to\the\file\astro.py
     ```
 
-* 資料輸出：csv.file, 檔名依照執行日期
+* 資料輸出：csv.file, 檔名依照執行日期, EX. [astro_info_20200314.csv](https://github.com/pcchencode/Astro_Crawl/blob/master/astro_info_20200314.csv)
   - 後續可利用套件 `pymssql` 將輸出的檔案每日 insert value into database
