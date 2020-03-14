@@ -49,13 +49,13 @@ def get_astro_info(url):
         return 404
 
 
- def main():
-    data = get_astro_info(url='http://astro.click108.com.tw/daily_9.php?iAstro=0')
-    for i in range(1, 12):
-        time.sleep()
-        data = data.append(get_astro_info(url='http://astro.click108.com.tw/daily_9.php?iAstro='+str(i)))
-        
-    return data
+def main():
+	data = get_astro_info(url='http://astro.click108.com.tw/daily_9.php?iAstro=0')
+	for i in range(1, 12):
+	    time.sleep(random.uniform(0,2))
+	    data = data.append(get_astro_info(url='http://astro.click108.com.tw/daily_9.php?iAstro='+str(i)))
+	    
+	return data
 
 
 
