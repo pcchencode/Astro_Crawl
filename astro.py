@@ -6,7 +6,7 @@ import random
 import time
 import pandas as pd
 
-
+# 抓出某篇星座的所有資訊
 def get_astro_info(url):
     req = rs.get(url)
     if req.status_code==200:
@@ -51,13 +51,16 @@ def get_astro_info(url):
 
 def main():
     data = get_astro_info(url='http://astro.click108.com.tw/daily_9.php?iAstro=0')
-    for i in range(1, 12):
-        time.sleep(random.uniform(0,2))
+    for i in range(1, 12): # 將所有星座的資訊爬取下來
+        time.sleep(random.uniform(0,2)) # 間隔時間以防被擋IP
         data = data.append(get_astro_info(url='http://astro.click108.com.tw/daily_9.php?iAstro='+str(i)))
-	    
+
     return data
 
 
 
 if __name__ == '__main__':
     main().to_csv('astro_info_'+str(datetime.datetime.today().strftime('%Y%m%d'))+'.csv', index=False)
+    '''
+    後續此段可寫入，利用套件pymssql將data insert into database
+    '''
